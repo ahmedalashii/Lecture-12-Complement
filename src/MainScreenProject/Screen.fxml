@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.web.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox fx:id="vbox1" prefHeight="200.0" prefWidth="100.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="textArea" text="Playing With JavaFX Advanced Controls" />
+            <Slider fx:id="sliderFontSize" majorTickUnit="5.0" max="35.0" min="5.0" minorTickCount="4" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="12.0" />
+            <HBox fx:id="hbox1" prefHeight="354.0" prefWidth="1000.0" spacing="15.0">
+               <children>
+                  <ComboBox fx:id="comboBoxLinks" onAction="#handleComboBox" prefWidth="150.0" />
+                  <WebView fx:id="webView" prefHeight="349.0" prefWidth="838.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+   <top>
+      <MenuBar fx:id="menuBar" prefHeight="26.0" prefWidth="1015.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu fx:id="menuFile" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="fileItemOpen" mnemonicParsing="false" onAction="#handle" text="Open" />
+                  <MenuItem fx:id="fileItemClose" mnemonicParsing="false" onAction="#handle" text="Close" />
+                  <MenuItem fx:id="fileItemSave" mnemonicParsing="false" onAction="#handle" text="Save" />
+                  <MenuItem fx:id="fileItemExit" mnemonicParsing="false" onAction="#handle" text="Exit" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuColor" mnemonicParsing="false" text="Color">
+            <items>
+              <MenuItem fx:id="colorItemGold" mnemonicParsing="false" onAction="#handle" text="Gold" />
+                  <MenuItem fx:id="colorItemCyan" mnemonicParsing="false" onAction="#handle" text="Cyan" />
+                  <MenuItem fx:id="colorItemRed" mnemonicParsing="false" onAction="#handle" text="Red" />
+            </items>
+          </Menu>
+          <Menu fx:id="menuAbout" mnemonicParsing="false" text="About">
+            <items>
+              <MenuItem fx:id="aboutItem" mnemonicParsing="false" onAction="#handle" text="About Me" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
